@@ -20,4 +20,4 @@ Examples
 .. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-math.svg?branch=master
 .. _buildstatus: https://travis-ci.com/eerimoq/mys-math
 
-.. _Mys programming language: https://github.com/eerimoq/mys-math
+.. _Mys programming language: https://github.com/eerimoq/mys
