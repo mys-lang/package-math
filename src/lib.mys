@@ -9,14 +9,14 @@ def sin(angle: float) -> float:
 
     """
 
-    'mys-embedded-c++ return std::sin(angle);'
+    return 'mys-embedded-c++ std::sin(angle)'
 
 def cos(angle: float) -> float:
     """Returns the trigonometric cosine of given angle in radians.
 
     """
 
-    'mys-embedded-c++ return std::cos(angle);'
+    return 'mys-embedded-c++ std::cos(angle)'
 
 @test
 def test_sin():
