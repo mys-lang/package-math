@@ -1,0 +1,25 @@
+'''mys-embedded-c++-before-namespace
+#include <cmath>
+'''
+
+def sin(angle: float) -> float:
+    """Returns the trigonometric sine of given angle in radians.
+
+    """
+
+    'mys-embedded-c++ return std::sin(angle);'
+
+def cos(angle: float) -> float:
+    """Returns the trigonometric cosine of given angle in radians.
+
+    """
+
+    'mys-embedded-c++ return std::cos(angle);'
+
+@test
+def test_sin():
+    assert_eq(sin(0), 0)
+
+@test
+def test_cos():
+    assert_eq(cos(0), 1)
