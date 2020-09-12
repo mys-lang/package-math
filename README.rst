@@ -17,7 +17,7 @@ Examples
        print('sin(0) =', sin(0))
        print('cos(0) =', cos(0))
 
-.. |buildstatus| image:: https://travis-ci.com/mys-math/math.svg?branch=master
-.. _buildstatus: https://travis-ci.com/mys-math/math
+.. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-math.svg?branch=master
+.. _buildstatus: https://travis-ci.com/eerimoq/mys-math
 
-.. _Mys programming language: https://github.com/eerimoq/mys
+.. _Mys programming language: https://github.com/eerimoq/mys-math
