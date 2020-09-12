@@ -19,3 +19,5 @@ Examples
 
 .. |buildstatus| image:: https://travis-ci.com/mys-math/math.svg?branch=master
 .. _buildstatus: https://travis-ci.com/mys-math/math
+
+.. _Mys programming language: https://github.com/eerimoq/mys
