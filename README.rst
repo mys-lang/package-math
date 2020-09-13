@@ -16,8 +16,8 @@ Examples
    from math import cos
 
    def main():
-       print('pi =', pi)
-       print('e =', e)
+       print('pi =    ', pi)
+       print('e =     ', e)
        print('sin(0) =', sin(0))
        print('cos(0) =', cos(0))
 
