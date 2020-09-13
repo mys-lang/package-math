@@ -4,6 +4,11 @@
 #include <cmath>
 '''
 
+pi: float = 3.14159265358979323846
+
+e: float = 2.71828182845904523536
+
+@public
 def sin(angle: float) -> float:
     """Returns the trigonometric sine of given angle in radians.
 
@@ -11,6 +16,7 @@ def sin(angle: float) -> float:
 
     return 'mys-embedded-c++ std::sin(angle)'
 
+@public
 def cos(angle: float) -> float:
     """Returns the trigonometric cosine of given angle in radians.
 
@@ -25,3 +31,13 @@ def test_sin():
 @test
 def test_cos():
     assert_eq(cos(0), 1)
+
+@test
+def test_pi():
+    assert_gt(pi, 3.14)
+    assert_lt(pi, 3.15)
+
+@test
+def test_e():
+    assert_gt(e, 2.71)
+    assert_lt(e, 2.72)

@@ -10,10 +10,14 @@ Examples
 
 .. code-block:: python
 
+   from math import pi
+   from math import e
    from math import sin
    from math import cos
 
    def main():
+       print('pi =', pi)
+       print('e =', e)
        print('sin(0) =', sin(0))
        print('cos(0) =', cos(0))
 
