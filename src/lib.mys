@@ -8,6 +8,8 @@ pi: float = 3.14159265358979323846
 
 e: float = 2.71828182845904523536
 
+nan: float = NAN
+
 @public
 def sin(angle: float) -> float:
     """Returns the trigonometric sine of given angle in radians.
@@ -23,6 +25,14 @@ def cos(angle: float) -> float:
     """
 
     return 'mys-embedded-c++ std::cos(angle)'
+
+@public
+def is_nan(value: float) -> bool:
+    """Returns true if given value is not a number.
+
+    """
+
+    return 'mys-embedded-c++ std::isnan(value)'
 
 @test
 def test_sin():
@@ -41,3 +51,7 @@ def test_pi():
 def test_e():
     assert_gt(e, 2.71)
     assert_lt(e, 2.72)
+
+@test
+def test_nan():
+    assert_true(is_nan(nan))
