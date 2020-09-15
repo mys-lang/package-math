@@ -1,9 +1,9 @@
-from math import pi
-from math import e
-from math import sin
-from math import cos
-from math import is_nan
-from math import nan
+from . import pi
+from . import e
+from . import sin
+from . import cos
+from . import is_nan
+from . import nan
 
 def main():
     print('pi =         ', pi)
