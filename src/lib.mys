@@ -5,9 +5,8 @@
 '''
 
 pi: float = 3.14159265358979323846
-
 e: float = 2.71828182845904523536
-
+# pylint: disable=undefined-variable
 nan: float = NAN
 
 @public
