@@ -1,29 +1,13 @@
-from math import sin
-from math import cos
 from math import pi
 from math import e
+from math import sin
+from math import cos
+from math import is_nan
+from math import nan
 
 def main():
-    print('pi:', pi)
-    print('e: ', e)
-    print()
-
-    angles: [float] = [
-        0 * pi / 4,
-        1 * pi / 4,
-        2 * pi / 4,
-        3 * pi / 4,
-        4 * pi / 4,
-        5 * pi / 4,
-        6 * pi / 4,
-        7 * pi / 4,
-        8 * pi / 4
-    ]
-
-    for angle in angles:
-        print(f'sin({angle}) =', sin(angle))
-
-    print()
-
-    for angle in angles:
-        print(f'cos({angle}) =', cos(angle))
+    print('pi =         ', pi)
+    print('e =          ', e)
+    print('sin(0) =     ', sin(0))
+    print('cos(0) =     ', cos(0))
+    print('is_nan(nan) =', is_nan(nan))
