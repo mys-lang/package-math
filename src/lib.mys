@@ -5,11 +5,12 @@
 '''
 
 pi: float = 3.14159265358979323846
+
 e: float = 2.71828182845904523536
+
 # pylint: disable=undefined-variable
 nan: float = NAN
 
-@public
 def sin(angle: float) -> float:
     """Returns the trigonometric sine of given angle in radians.
 
@@ -17,7 +18,6 @@ def sin(angle: float) -> float:
 
     return 'mys-embedded-c++ std::sin(angle)'
 
-@public
 def cos(angle: float) -> float:
     """Returns the trigonometric cosine of given angle in radians.
 
@@ -25,7 +25,6 @@ def cos(angle: float) -> float:
 
     return 'mys-embedded-c++ std::cos(angle)'
 
-@public
 def is_nan(value: float) -> bool:
     """Returns true if given value is not a number.
 
