@@ -4,28 +4,28 @@
 #include <cmath>
 '''
 
-pi: float = 3.14159265358979323846
+pi: f64 = 3.14159265358979323846
 
-e: float = 2.71828182845904523536
+e: f64 = 2.71828182845904523536
 
 # pylint: disable=undefined-variable
-nan: float = NAN
+nan: f64 = NAN
 
-def sin(angle: float) -> float:
+def sin(angle: f64) -> f64:
     """Returns the trigonometric sine of given angle in radians.
 
     """
 
     return 'mys-embedded-c++ std::sin(angle)'
 
-def cos(angle: float) -> float:
+def cos(angle: f64) -> f64:
     """Returns the trigonometric cosine of given angle in radians.
 
     """
 
     return 'mys-embedded-c++ std::cos(angle)'
 
-def is_nan(value: float) -> bool:
+def is_nan(value: f64) -> bool:
     """Returns true if given value is not a number.
 
     """
@@ -53,3 +53,4 @@ def test_e():
 @test
 def test_nan():
     assert_true(is_nan(nan))
+    assert_false(is_nan(1.0))
