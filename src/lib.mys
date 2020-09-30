@@ -1,8 +1,8 @@
 # pylint: disable=unused-argument
 
-'''mys-embedded-c++-before-namespace
+"""mys-embedded-c++-before-namespace
 #include <cmath>
-'''
+"""
 
 pi: f64 = 3.14159265358979323846
 
@@ -16,21 +16,21 @@ def sin(angle: f64) -> f64:
 
     """
 
-    return 'mys-embedded-c++ std::sin(angle)'
+    return "mys-embedded-c++ std::sin(angle)"
 
 def cos(angle: f64) -> f64:
     """Returns the trigonometric cosine of given angle in radians.
 
     """
 
-    return 'mys-embedded-c++ std::cos(angle)'
+    return "mys-embedded-c++ std::cos(angle)"
 
 def is_nan(value: f64) -> bool:
     """Returns true if given value is not a number.
 
     """
 
-    return 'mys-embedded-c++ std::isnan(value)'
+    return "mys-embedded-c++ std::isnan(value)"
 
 @test
 def test_sin():
