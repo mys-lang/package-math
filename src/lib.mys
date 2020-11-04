@@ -32,6 +32,17 @@ def is_nan(value: f64) -> bool:
 
     return "mys-embedded-c++ std::isnan(value)"
 
+@generic(T)
+def abs(value: T) -> T:
+    if value < 0:
+        value *= -1
+
+    return value
+
+@generic(T)
+def div_ceil(numerator: T, denominator: T) -> T:
+    return (numerator + (denominator - 1)) / denominator
+
 @test
 def test_sin():
     assert_eq(sin(0), 0)
@@ -54,3 +65,20 @@ def test_e():
 def test_nan():
     assert_true(is_nan(nan))
     assert_false(is_nan(1.0))
+
+@test
+def test_abs():
+    assert_eq(abs(-1), 1)
+    assert_eq(abs(1), 1)
+    assert_eq(abs(-10.0), 10.0)
+    assert_eq(abs(10.0), 10.0)
+
+@test
+def test_div_ceil():
+    assert_eq(div_ceil(3, 3), 1)
+    assert_eq(div_ceil(4, 3), 2)
+    assert_eq(div_ceil(5, 3), 2)
+    assert_eq(div_ceil(6, 3), 2)
+    assert_eq(div_ceil(7, 3), 3)
+
+    assert_eq(div_ceil(5, 1), 5)
