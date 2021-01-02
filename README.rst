@@ -1,5 +1,3 @@
-|buildstatus|_
-
 Math
 ====
 
@@ -10,19 +8,19 @@ Examples
 
 .. code-block:: python
 
-   from math import pi
-   from math import e
+   from math import PI
+   from math import E
    from math import sin
    from math import cos
    from math import is_nan
-   from math import nan
+   from math import NAN
 
    def main():
-       print('pi =         ', pi)
-       print('e =          ', e)
+       print('pi =         ', PI)
+       print('e =          ', E)
        print('sin(0) =     ', sin(0))
        print('cos(0) =     ', cos(0))
-       print('is_nan(nan) =', is_nan(nan))
+       print('is_nan(nan) =', is_nan(NAN))
 
 .. code-block:: text
 
@@ -33,7 +31,4 @@ Examples
    cos(0) =      1
    is_nan(nan) = True
 
-.. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-math.svg?branch=master
-.. _buildstatus: https://travis-ci.com/eerimoq/mys-math
-
-.. _Mys programming language: https://github.com/eerimoq/mys
+.. _Mys programming language: https://github.com/mys-lang/mys

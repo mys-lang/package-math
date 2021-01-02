@@ -1,13 +1,13 @@
-from . import pi
-from . import e
+from . import PI
+from . import E
 from . import sin
 from . import cos
 from . import is_nan
-from . import nan
+from . import NAN
 
 def main():
-    print("pi =         ", pi)
-    print("e =          ", e)
+    print("pi =         ", PI)
+    print("e =          ", E)
     print("sin(0) =     ", sin(0))
     print("cos(0) =     ", cos(0))
-    print("is_nan(nan) =", is_nan(nan))
+    print("is_nan(nan) =", is_nan(NAN))

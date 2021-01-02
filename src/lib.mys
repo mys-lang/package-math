@@ -2,14 +2,17 @@
 
 """mys-embedded-c++-before-namespace
 #include <cmath>
+
+#define CNAN NAN
+#undef NAN
 """
 
-pi: f64 = 3.14159265358979323846
+PI: f64 = 3.14159265358979323846
 
-e: f64 = 2.71828182845904523536
+E: f64 = 2.71828182845904523536
 
 # pylint: disable=undefined-variable
-nan: f64 = NAN
+NAN: f64 = CNAN
 
 def sin(angle: f64) -> f64:
     """Returns the trigonometric sine of given angle in radians.
@@ -53,17 +56,17 @@ def test_cos():
 
 @test
 def test_pi():
-    assert_gt(pi, 3.14)
-    assert_lt(pi, 3.15)
+    assert_gt(PI, 3.14)
+    assert_lt(PI, 3.15)
 
 @test
 def test_e():
-    assert_gt(e, 2.71)
-    assert_lt(e, 2.72)
+    assert_gt(E, 2.71)
+    assert_lt(E, 2.72)
 
 @test
 def test_nan():
-    assert_true(is_nan(nan))
+    assert_true(is_nan(NAN))
     assert_false(is_nan(1.0))
 
 @test
