@@ -96,10 +96,10 @@ def test_nan():
 
 @test
 def test_abs():
-    assert_eq(abs(-1), 1)
-    assert_eq(abs(1), 1)
-    assert_eq(abs(-10.0), 10.0)
-    assert_eq(abs(10.0), 10.0)
+    assert abs(-1) == 1
+    assert abs(1) == 1
+    assert abs(-10.0) == 10.0
+    assert abs(10.0) == 10.0
 
 @test
 def test_div_ceil():
