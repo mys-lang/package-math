@@ -3,11 +3,12 @@ from . import E
 from . import sin
 from . import cos
 from . import is_nan
-from . import NAN
+from . import sqrt
 
 def main():
     print("pi =         ", PI)
     print("e =          ", E)
-    print("sin(0) =     ", sin(0))
-    print("cos(0) =     ", cos(0))
-    print("is_nan(nan) =", is_nan(NAN))
+    print("sin(0.0) =   ", sin(0.0))
+    print("cos(0.0) =   ", cos(0.0))
+    print("is_nan(0.0) =", is_nan(0.0))
+    print("sqrt(4.0)   =", sqrt(4.0))

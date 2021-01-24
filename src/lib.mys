@@ -1,39 +1,65 @@
-# pylint: disable=unused-argument
-
 """mys-embedded-c++-before-namespace
-#include <cmath>
 
-#define CNAN NAN
-#undef NAN
+#include <cmath>
 """
 
 PI: f64 = 3.14159265358979323846
 
 E: f64 = 2.71828182845904523536
 
-# pylint: disable=undefined-variable
-NAN: f64 = CNAN
-
 def sin(angle: f64) -> f64:
     """Returns the trigonometric sine of given angle in radians.
 
     """
 
-    return "mys-embedded-c++ std::sin(angle)"
+    value: f64 = 0.0
+
+    """mys-embedded-c++
+
+    value = std::sin(angle);
+    """
+
+    return value
 
 def cos(angle: f64) -> f64:
     """Returns the trigonometric cosine of given angle in radians.
 
     """
 
-    return "mys-embedded-c++ std::cos(angle)"
+    value: f64 = 0.0
+
+    """mys-embedded-c++
+
+    value = std::cos(angle);
+    """
+
+    return value
 
 def is_nan(value: f64) -> bool:
     """Returns true if given value is not a number.
 
     """
 
-    return "mys-embedded-c++ std::isnan(value)"
+    result: bool = False
+
+    """mys-embedded-c++
+
+    value = std::isnan(value);
+    """
+
+    return result
+
+def sqrt(value: f64) -> f64:
+    """Returns the square root of given number.
+
+    """
+
+    """mys-embedded-c++
+
+    value = std::sqrt(value);
+    """
+
+    return value
 
 @generic(T)
 def abs(value: T) -> T:
@@ -48,26 +74,25 @@ def div_ceil(numerator: T, denominator: T) -> T:
 
 @test
 def test_sin():
-    assert_eq(sin(0), 0)
+    assert sin(0.0) == 0.0
 
 @test
 def test_cos():
-    assert_eq(cos(0), 1)
+    assert cos(0.0) == 1.0
 
 @test
 def test_pi():
-    assert_gt(PI, 3.14)
-    assert_lt(PI, 3.15)
+    assert PI > 3.14
+    assert PI < 3.15
 
 @test
 def test_e():
-    assert_gt(E, 2.71)
-    assert_lt(E, 2.72)
+    assert E > 2.71
+    assert E < 2.72
 
 @test
 def test_nan():
-    assert_true(is_nan(NAN))
-    assert_false(is_nan(1.0))
+    assert not is_nan(1.0)
 
 @test
 def test_abs():
@@ -78,10 +103,16 @@ def test_abs():
 
 @test
 def test_div_ceil():
-    assert_eq(div_ceil(3, 3), 1)
-    assert_eq(div_ceil(4, 3), 2)
-    assert_eq(div_ceil(5, 3), 2)
-    assert_eq(div_ceil(6, 3), 2)
-    assert_eq(div_ceil(7, 3), 3)
+    assert div_ceil[i64](3, 3) == 1
+    assert div_ceil[i64](4, 3) == 2
+    assert div_ceil[i64](5, 3) == 2
+    assert div_ceil[i64](6, 3) == 2
+    assert div_ceil[i64](7, 3) == 3
 
-    assert_eq(div_ceil(5, 1), 5)
+    assert div_ceil[i64](5, 1) == 5
+
+@test
+def test_sqrt():
+    assert sqrt(4.0) == 2.0
+    assert sqrt(16.0) == 4.0
+    assert sqrt(144.0) == 12.0
