@@ -61,6 +61,18 @@ def sqrt(value: f64) -> f64:
 
     return value
 
+def sqrt(value: f32) -> f32:
+    """Returns the square root of given number.
+
+    """
+
+    """mys-embedded-c++
+
+    value = std::sqrt(value);
+    """
+
+    return value
+
 @generic(T)
 def abs(value: T) -> T:
     if value < 0:
@@ -113,6 +125,9 @@ def test_div_ceil():
 
 @test
 def test_sqrt():
-    assert sqrt(4.0) == 2.0
-    assert sqrt(16.0) == 4.0
-    assert sqrt(144.0) == 12.0
+    assert sqrt(f64(4.0)) == 2.0
+    assert sqrt(f64(16.0)) == 4.0
+    assert sqrt(f64(144.0)) == 12.0
+    assert sqrt(f32(4.0)) == 2.0
+    assert sqrt(f32(16.0)) == 4.0
+    assert sqrt(f32(144.0)) == 12.0

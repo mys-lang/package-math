@@ -11,4 +11,4 @@ def main():
     print("sin(0.0) =   ", sin(0.0))
     print("cos(0.0) =   ", cos(0.0))
     print("is_nan(0.0) =", is_nan(0.0))
-    print("sqrt(4.0)   =", sqrt(4.0))
+    print("sqrt(4.0)   =", sqrt(f64(4.0)))
