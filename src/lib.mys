@@ -14,10 +14,7 @@ def sin(angle: f64) -> f64:
 
     value: f64 = 0.0
 
-    """mys-embedded-c++
-
-    value = std::sin(angle);
-    """
+    c"value = std::sin(angle);"
 
     return value
 
@@ -28,10 +25,7 @@ def cos(angle: f64) -> f64:
 
     value: f64 = 0.0
 
-    """mys-embedded-c++
-
-    value = std::cos(angle);
-    """
+    c"value = std::cos(angle);"
 
     return value
 
@@ -42,10 +36,7 @@ def is_nan(value: f64) -> bool:
 
     result: bool = False
 
-    """mys-embedded-c++
-
-    value = std::isnan(value);
-    """
+    c"value = std::isnan(value);"
 
     return result
 
@@ -54,10 +45,7 @@ def sqrt(value: f64) -> f64:
 
     """
 
-    """mys-embedded-c++
-
-    value = std::sqrt(value);
-    """
+    c"value = std::sqrt(value);"
 
     return value
 
@@ -66,10 +54,7 @@ def sqrt(value: f32) -> f32:
 
     """
 
-    """mys-embedded-c++
-
-    value = std::sqrt(value);
-    """
+    c"value = std::sqrt(value);"
 
     return value
 
