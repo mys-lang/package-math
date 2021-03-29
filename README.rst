@@ -33,4 +33,4 @@ Examples
    is_nan(0.0) = False
    sqrt(4.0)   = 2
 
-.. _Mys programming language: https://github.com/mys-lang/mys
+.. _Mys programming language: https://mys-lang.org
