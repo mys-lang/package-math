@@ -28,6 +28,9 @@ def cos(angle: f64) -> f64:
 
     return value
 
+def tan(value: f64) -> f64:
+    return sin(value) / cos(value)
+
 def is_nan(value: f64) -> bool:
     """Returns true if given value is not a number.
 
@@ -75,6 +78,12 @@ def test_sin():
 @test
 def test_cos():
     assert cos(0.0) == 1.0
+
+@test
+def test_tan():
+    assert tan(0.0) == 0.0
+    assert tan(PI / 4.0) > 0.99
+    assert tan(PI / 4.0) < 1.01
 
 @test
 def test_pi():
