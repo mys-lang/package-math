@@ -1,8 +1,8 @@
-from . import PI
 from . import E
-from . import sin
+from . import PI
 from . import cos
 from . import is_nan
+from . import sin
 from . import sqrt
 
 def main():
