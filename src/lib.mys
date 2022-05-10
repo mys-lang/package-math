@@ -6,7 +6,7 @@ PI: f64 = 3.14159265358979323846
 
 E: f64 = 2.71828182845904523536
 
-def sin(angle: f64) -> f64:
+func sin(angle: f64) -> f64:
     """Returns the trigonometric sine of given angle in radians.
 
     """
@@ -17,7 +17,7 @@ def sin(angle: f64) -> f64:
 
     return value
 
-def cos(angle: f64) -> f64:
+func cos(angle: f64) -> f64:
     """Returns the trigonometric cosine of given angle in radians.
 
     """
@@ -28,10 +28,10 @@ def cos(angle: f64) -> f64:
 
     return value
 
-def tan(value: f64) -> f64:
+func tan(value: f64) -> f64:
     return sin(value) / cos(value)
 
-def is_nan(value: f64) -> bool:
+func is_nan(value: f64) -> bool:
     """Returns true if given value is not a number.
 
     """
@@ -42,7 +42,7 @@ def is_nan(value: f64) -> bool:
 
     return result
 
-def sqrt(value: f64) -> f64:
+func sqrt(value: f64) -> f64:
     """Returns the square root of given number.
 
     """
@@ -51,7 +51,7 @@ def sqrt(value: f64) -> f64:
 
     return value
 
-def sqrt(value: f32) -> f32:
+func sqrt(value: f32) -> f32:
     """Returns the square root of given number.
 
     """
@@ -61,53 +61,53 @@ def sqrt(value: f32) -> f32:
     return value
 
 @generic(T)
-def abs(value: T) -> T:
+func abs(value: T) -> T:
     if value < 0:
         value *= -1
 
     return value
 
 @generic(T)
-def div_ceil(numerator: T, denominator: T) -> T:
+func div_ceil(numerator: T, denominator: T) -> T:
     return (numerator + (denominator - 1)) / denominator
 
 @test
-def test_sin():
+func test_sin():
     assert sin(0.0) == 0.0
 
 @test
-def test_cos():
+func test_cos():
     assert cos(0.0) == 1.0
 
 @test
-def test_tan():
+func test_tan():
     assert tan(0.0) == 0.0
     assert tan(PI / 4.0) > 0.99
     assert tan(PI / 4.0) < 1.01
 
 @test
-def test_pi():
+func test_pi():
     assert PI > 3.14
     assert PI < 3.15
 
 @test
-def test_e():
+func test_e():
     assert E > 2.71
     assert E < 2.72
 
 @test
-def test_nan():
+func test_nan():
     assert not is_nan(1.0)
 
 @test
-def test_abs():
+func test_abs():
     assert abs(-1) == 1
     assert abs(1) == 1
     assert abs(-10.0) == 10.0
     assert abs(10.0) == 10.0
 
 @test
-def test_div_ceil():
+func test_div_ceil():
     assert div_ceil[i64](3, 3) == 1
     assert div_ceil[i64](4, 3) == 2
     assert div_ceil[i64](5, 3) == 2
@@ -117,7 +117,7 @@ def test_div_ceil():
     assert div_ceil[i64](5, 1) == 5
 
 @test
-def test_sqrt():
+func test_sqrt():
     assert sqrt(f64(4.0)) == 2.0
     assert sqrt(f64(16.0)) == 4.0
     assert sqrt(f64(144.0)) == 12.0

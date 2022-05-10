@@ -21,7 +21,7 @@ Example
    from math import is_nan
    from math import sqrt
 
-   def main():
+   func main():
        print("pi =         ", PI)
        print("e =          ", E)
        print("sin(0.0) =   ", sin(0.0))

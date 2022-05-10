@@ -5,7 +5,7 @@ from . import is_nan
 from . import sin
 from . import sqrt
 
-def main():
+func main():
     print("pi =         ", PI)
     print("e =          ", E)
     print("sin(0.0) =   ", sin(0.0))
