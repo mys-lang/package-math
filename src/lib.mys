@@ -71,43 +71,35 @@ func abs(value: T) -> T:
 func div_ceil(numerator: T, denominator: T) -> T:
     return (numerator + (denominator - 1)) / denominator
 
-@test
-func test_sin():
+test sin():
     assert sin(0.0) == 0.0
 
-@test
-func test_cos():
+test cos():
     assert cos(0.0) == 1.0
 
-@test
-func test_tan():
+test tan():
     assert tan(0.0) == 0.0
     assert tan(PI / 4.0) > 0.99
     assert tan(PI / 4.0) < 1.01
 
-@test
-func test_pi():
+test pi():
     assert PI > 3.14
     assert PI < 3.15
 
-@test
-func test_e():
+test e():
     assert E > 2.71
     assert E < 2.72
 
-@test
-func test_nan():
+test nan():
     assert not is_nan(1.0)
 
-@test
-func test_abs():
+test abs():
     assert abs(-1) == 1
     assert abs(1) == 1
     assert abs(-10.0) == 10.0
     assert abs(10.0) == 10.0
 
-@test
-func test_div_ceil():
+test div_ceil():
     assert div_ceil[i64](3, 3) == 1
     assert div_ceil[i64](4, 3) == 2
     assert div_ceil[i64](5, 3) == 2
@@ -116,8 +108,7 @@ func test_div_ceil():
 
     assert div_ceil[i64](5, 1) == 5
 
-@test
-func test_sqrt():
+test sqrt():
     assert sqrt(f64(4.0)) == 2.0
     assert sqrt(f64(16.0)) == 4.0
     assert sqrt(f64(144.0)) == 12.0
